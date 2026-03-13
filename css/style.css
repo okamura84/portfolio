@@ -1,0 +1,456 @@
+@charset "utf-8";
+
+/* 基本設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+
+body {
+  letter-spacing: 0.05em;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+li {
+  list-style: none;
+}
+/* 幅 */
+.wrapper {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ボタン */
+/* .btn {
+  background-color: #8ab3dc;
+  color: #fff;
+  border: none;
+  max-width: 300px;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  box-shadow: 0 4px #818694;
+  cursor: pointer;
+} */
+
+/* 見出し */
+.section-title,
+.section-subtitle {
+  color: #4b52a7;
+  text-align: center;
+}
+.section-title {
+  margin-top: 80px;
+  font-size: 24px;
+}
+.section-subtitle {
+  font-size: 14px;
+  display: block;
+}
+
+.introduction-heading,
+.sub-heading {
+  color: #fff;
+  text-align: center;
+}
+.introduction-heading {
+  font-size: 16px;
+  padding-top: 20px;
+  border-bottom: 1px #ffffff solid;
+}
+.sub-heading {
+  font-size: 12px;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.sample-heading {
+  color: #32839c;
+  text-align: center;
+  border-bottom: 1px #b7b7b7 solid;
+  margin: 80px auto 40px;
+  font-size: 16px;
+}
+
+/* header
+-------------- */
+.page-header {
+  background-color: rgb(0, 0, 0, 0.8);
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+.page-header h1 {
+  font-size: 26px;
+}
+.page-header h1 a {
+  color: #fff;
+  transition: 0.2s;
+}
+.page-header h1 span {
+  color: #a6acff;
+}
+.page-header .pc-nav {
+  display: flex;
+  gap: 20px;
+}
+.page-header .pc-nav li {
+  font-size: 16px;
+}
+.page-header .pc-nav li a {
+  color: #fff;
+  transition: color 0.2s;
+}
+.page-header .pc-nav li a:hover {
+  color: #a6acff;
+}
+
+/* ハンバーガーメニュー */
+.hamburger {
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  display: none;
+  position: relative;
+  z-index: 1001;
+}
+.hamburger span {
+  background-color: #fff;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  position: absolute;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease,
+    background-color 0.2s ease;
+}
+.hamburger:hover span {
+  background: #a6acff;
+}
+.hamburger span:nth-child(1) {
+  top: 0px;
+}
+.hamburger span:nth-child(2) {
+  top: 10px;
+}
+.hamburger span:nth-child(3) {
+  top: 20px;
+}
+.hamburger.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* ハンバーガーメニュー本体 */
+.hamburger-menu {
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  transition: opacity 0.4s ease;
+}
+.hamburger-menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+.hamburger-menu ul {
+  background-color: #000;
+  height: 100%;
+  width: 200px;
+  padding: 30px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+.hamburger-menu.active ul {
+  opacity: 1;
+  transform: translateX(0);
+}
+.hamburger-menu li {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.hamburger-menu.active li {
+  opacity: 1;
+  transform: translateX(0);
+}
+.hamburger-menu.active li:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.hamburger-menu.active li:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+.hamburger-menu a {
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.hamburger-menu a:hover {
+  color: #a6acff;
+}
+
+/* main
+------------- */
+.main-image {
+  height: 40vh;
+  background-image: url(../images/main.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* introduction */
+.introduction p {
+  line-height: 32px;
+  padding: 40px 0 30px;
+  font-size: 16px;
+}
+.container span {
+  font-weight: bold;
+}
+.introduction-image img {
+  margin-bottom: 40px;
+}
+.introduction-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.list-card {
+  background-color: #8ab3dc;
+  width: 48%;
+  padding: 0px 10px;
+  border-radius: 10px;
+}
+
+.introduction-box {
+  padding: 20px 0 20px 20px;
+}
+.introduction-box li {
+  height: 30px;
+  line-height: 30px;
+  list-style: disc;
+  list-style-position: inside;
+}
+.web .introduction-box li::marker {
+  color: #ffe8f6;
+}
+.hobby li {
+  color: #feffc7;
+}
+.web li {
+  color: #ffe8f6;
+}
+
+/*
+ sample
+*/
+.gallery {
+  display: flex;
+}
+.img-title {
+  color: #fff;
+  background-color: #758baf;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 14px;
+  width: 90%;
+  margin-inline: auto;
+}
+.gallery-img img {
+  width: 90%;
+  margin-inline: auto;
+  display: block;
+  filter: brightness(1) contrast(1.1) saturate(1.2);
+}
+.gallery-img p {
+  font-size: 12px;
+  padding-top: 4px;
+  width: 90%;
+  margin-inline: auto;
+}
+
+.skill {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.skill h4 {
+  margin-inline: 0;
+  width: 100%;
+}
+.skill-description {
+  margin-top: 8px;
+}
+.skill-description > li {
+  padding-bottom: 1rem;
+}
+.skill-description li ol li {
+  list-style: decimal inside;
+}
+
+.skill-url:hover {
+  opacity: 0.6;
+}
+.skill-img img {
+  border: 1px solid #000;
+  width: 100%;
+  height: auto;
+}
+
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #8ab3dc;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 50px;
+  font-size: 14px;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s;
+}
+.to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+.to-top:hover {
+  opacity: 0.8;
+}
+
+/* 
+footer
+*/
+.page-footer {
+  background-color: #8ab3dc;
+  color: #fff;
+  height: 120px;
+  margin-top: 120px;
+}
+.page-footer div {
+  padding-top: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  /* 見出し */
+  .section-title {
+    font-size: 20px;
+  }
+  .section-subtitle {
+    font-size: 12px;
+  }
+  .introduction-heading {
+    font-size: 16px;
+  }
+  .sample-heading {
+    font-size: 16px;
+  }
+
+  /* header*/
+  .page-header {
+    height: 48px;
+    line-height: 48px;
+  }
+  .page-header h1 {
+    font-size: 20px;
+  }
+  .page-header .pc-nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  /* main*/
+  .main-image {
+    height: 100vh;
+    background-image: url(../images/main_sp.jpg);
+  }
+  .introduction p {
+    font-size: 14px;
+  }
+  .introduction-flex {
+    flex-direction: column;
+  }
+  .list-card {
+    width: 100%;
+  }
+  .hobby {
+    margin-bottom: 10px;
+  }
+
+  /* sample*/
+  .gallery {
+    flex-direction: column;
+  }
+  .gallery-img {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .gallery-img h4 {
+    font-size: 14px;
+    width: 100%;
+  }
+  .gallery-img img {
+    width: 100%;
+  }
+  .gallery-img p {
+    width: 100%;
+  }
+
+  .skill {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  .skill-description > li {
+    font-size: 14px;
+  }
+
+  /* footer */
+  .page-footer small {
+    font-size: 14px;
+  }
+}
