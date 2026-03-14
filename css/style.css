@@ -354,7 +354,7 @@ li {
   text-align: center;
 }
 #contact p {
-  margin: 40px 0 20px;
+  margin: 30px 0;
 }
 
 /* to-top */
@@ -413,6 +413,7 @@ footer
   .page-header {
     height: 48px;
     line-height: 48px;
+    padding: 0 20px;
   }
   .page-header h1 {
     font-size: 20px;
@@ -440,6 +441,9 @@ footer
   }
   .hobby {
     margin-bottom: 10px;
+  }
+  .introduction-box li {
+    font-size: 14px;
   }
 
   /* sample*/
@@ -469,6 +473,13 @@ footer
   }
   .works-description > li {
     font-size: 14px;
+  }
+
+  #contact {
+    font-size: 14px;
+  }
+  #contact p {
+    margin: 20px 0;
   }
 
   /* footer */
