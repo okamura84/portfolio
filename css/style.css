@@ -192,8 +192,8 @@ li {
 }
 .hamburger-menu ul {
   background-color: #000;
-  height: 100%;
   width: 200px;
+  height: 100%;
   padding: 30px 40px;
   position: fixed;
   top: 0;
@@ -267,8 +267,8 @@ li {
   justify-content: space-between;
 }
 .list-card {
-  background-color: #8ab3dc;
   width: 48%;
+  background-color: #8ab3dc;
   padding: 0px 10px;
   border-radius: 10px;
 }
@@ -299,11 +299,11 @@ li {
   display: flex;
 }
 .img-title {
+  font-size: 14px;
   color: #fff;
   background-color: #758baf;
   text-align: center;
   padding: 6px 0;
-  font-size: 14px;
   width: 90%;
   margin-inline: auto;
 }
@@ -359,15 +359,15 @@ li {
 
 /* to-top */
 .to-top {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
+  font-size: 14px;
   background-color: #8ab3dc;
   color: #fff;
   padding: 10px 14px;
   border-radius: 50px;
-  font-size: 14px;
   text-decoration: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s;
