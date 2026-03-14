@@ -462,12 +462,12 @@ footer
     width: 100%;
   }
 
-  .skill {
+  .works {
     width: 80%;
     margin: auto;
     margin-bottom: 2rem;
   }
-  .skill-description > li {
+  .works-description > li {
     font-size: 14px;
   }
 
