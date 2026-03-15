@@ -12,6 +12,7 @@ html {
 
 body {
   letter-spacing: 0.05em;
+  font-family: sans-serif;
 }
 a {
   text-decoration: none;
@@ -32,27 +33,6 @@ li {
 .container {
   max-width: 600px;
   margin: 0 auto;
-}
-
-/* ボタン */
-.btn-wrapper {
-  width: 200px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  margin: 0 auto 20px;
-  border: none;
-  border-radius: 4px;
-  background-color: #8ab3dc;
-  box-shadow: 0 4px #818694;
-  cursor: pointer;
-}
-.btn {
-  color: #fff;
-}
-.btn-wrapper:active {
-  box-shadow: none;
-  transform: translateY(4px);
 }
 
 /* 見出し */
@@ -97,7 +77,7 @@ li {
 /* header
 -------------- */
 .page-header {
-  background-color: rgb(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 80px;
   line-height: 80px;
@@ -108,6 +88,7 @@ li {
   position: fixed;
   top: 0;
   z-index: 999;
+  user-select: none;
 }
 .page-header h1 {
   font-size: 26px;
@@ -356,21 +337,46 @@ li {
 #contact p {
   margin: 30px 0;
 }
+#contact .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 200px;
+  height: 40px;
+  padding: 0 8px;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #fff;
+  background-color: #8ab3dc;
+  border: none;
+  border-radius: 20px;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+#contact .btn:hover {
+  opacity: 0.8;
+}
 
 /* to-top */
 .to-top {
-  font-size: 14px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  text-align: center;
   background-color: #8ab3dc;
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 50px;
-  text-decoration: none;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
   position: fixed;
   right: 20px;
   bottom: 20px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s;
+}
+.to-top i {
+  font-size: 130%;
+  line-height: 50px;
 }
 .to-top.show {
   opacity: 1;
