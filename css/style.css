@@ -12,7 +12,7 @@ html {
 
 body {
   letter-spacing: 0.05em;
-  font-family: sans-serif;
+  font-family: "Roboto", "Noto Sans JP", sans-serif;
 }
 a {
   text-decoration: none;
@@ -310,7 +310,7 @@ li {
   margin-inline: 0;
   width: 100%;
 }
-.works-image a :hover {
+.works-img img:hover {
   opacity: 0.6;
 }
 .works-img img {
