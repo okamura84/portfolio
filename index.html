@@ -57,14 +57,14 @@
           自己紹介
           <span class="section-subtitle">About me</span>
         </h2>
-        <div class="container">
+        <div class="inner">
           <p>
             私の名前は<span>岡村 維吹</span
-            >です。神奈川県出身でWebエンジニアを目指して学習に取り組んでいます。<br />
+            >です。神奈川県出身でWebエンジニアを目指して学習に取り組んでいます<br />
             HTML / CSS / JavaScriptを中心に学習し、
             現在はReactの理解を深めています。
-            このポートフォリオでは、これまで制作した作品をまとめています。
-            どうぞよろしくお願いいたします。
+            このサイトでは、これまで制作した作品、スキルをまとめています。<br />
+            ぜひご覧ください。
           </p>
 
           <div class="introduction-image">
@@ -107,110 +107,108 @@
         </div>
       </section>
 
-      <section id="sample">
-        <div class="wrapper">
-          <h2 class="section-title">
-            プロジェクト
-            <span class="section-subtitle">Project</span>
-          </h2>
-          <h3 class="sample-heading">画像ギャラリー</h3>
-          <div class="gallery">
-            <div class="gallery-img">
-              <img src="images/gallery01.jpg" alt="宇宙飛行士の画像" />
-              <h4 class="img-title">宇宙飛行士と月</h4>
-              <p>幻想的な色彩の月と雲の前に、宇宙飛行士が立っています。</p>
-            </div>
-            <div class="gallery-img">
-              <img src="images/gallery02.jpg" alt="重ねられた石の画像" />
-              <h4 class="img-title">朝日と石</h4>
-              <p>積み重ねられた石を、朝日が照らしています。</p>
-            </div>
-            <div class="gallery-img">
-              <img src="images/gallery03.jpg" alt="鏡のような湖の画像" />
-              <h4 class="img-title">鏡のような湖</h4>
-              <p>空と海がどちらかわからなくなるような、鏡のような湖です。</p>
-            </div>
-            <div class="gallery-img">
-              <img src="images/gallery04.jpg" alt="ハートの風船の画像" />
-              <h4 class="img-title">ハートの風船</h4>
-              <p>
-                青空をバックに、たくさんの色とりどりのハートの風船が浮いています。
-              </p>
-            </div>
+      <section class="wrapper" id="sample">
+        <h2 class="section-title">
+          プロジェクト
+          <span class="section-subtitle">Project</span>
+        </h2>
+        <h3 class="sample-heading">画像ギャラリー</h3>
+        <div class="gallery">
+          <div class="gallery-img">
+            <img src="images/gallery01.jpg" alt="宇宙飛行士の画像" />
+            <h4 class="img-title">宇宙飛行士と月</h4>
+            <p>幻想的な色彩の月と雲の前に、宇宙飛行士が立っています。</p>
           </div>
+          <div class="gallery-img">
+            <img src="images/gallery02.jpg" alt="重ねられた石の画像" />
+            <h4 class="img-title">朝日と石</h4>
+            <p>積み重ねられた石を、朝日が照らしています。</p>
+          </div>
+          <div class="gallery-img">
+            <img src="images/gallery03.jpg" alt="鏡のような湖の画像" />
+            <h4 class="img-title">鏡のような湖</h4>
+            <p>空と海がどちらかわからなくなるような、鏡のような湖です。</p>
+          </div>
+          <div class="gallery-img">
+            <img src="images/gallery04.jpg" alt="ハートの風船の画像" />
+            <h4 class="img-title">ハートの風船</h4>
+            <p>
+              青空をバックに、たくさんの色とりどりのハートの風船が浮いています。
+            </p>
+          </div>
+        </div>
 
-          <!-- works -->
-          <h3 class="sample-heading">Works</h3>
-          <div class="container">
-            <div class="works">
-              <h4 class="img-title">ストップウォッチ</h4>
-              <div class="works-img">
-                <a
-                  href="works/stopwatch/index.html"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <img src="images/js1.png" alt="ストップウォッチのリンク" />
-                </a>
-              </div>
-              <ul class="works-description">
-                <li>
-                  <strong>概要</strong><br />
-                  JavaScriptを使用して、ストップウォッチを作成しました。
-                </li>
-
-                <li>
-                  <strong>工夫点</strong>
-                  <ul>
-                    <li>setIntervalを使用して時間を正確に計測しました。</li>
-                    <li>
-                      スタート中はボタンを無効化し、誤操作を防止しました。
-                    </li>
-                    <li>時間表示を見やすくするため、表示形式を整えました。</li>
-                  </ul>
-                </li>
-
-                <li>
-                  <strong>操作手順</strong>
-                  <ol>
-                    <li>「スタート」ボタンを押すと計測が始まります。</li>
-                    <li>「ストップ」ボタンで計測を停止します。</li>
-                    <li>「リセット」ボタンで時間を初期化します。</li>
-                  </ol>
-                </li>
-              </ul>
+        <!-- works -->
+        <h3 class="sample-heading">Works</h3>
+        <div class="works">
+          <div class="stopwatch">
+            <h4 class="img-title">ストップウォッチ</h4>
+            <div class="works-img">
+              <a
+                href="works/stopwatch/index.html"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="images/stopwatch.jpg"
+                  alt="ストップウォッチのリンク"
+                />
+              </a>
             </div>
-            <div class="works">
-              <h4 class="img-title">簡易ピアノ</h4>
-              <div class="works-img">
-                <a href="works/piano/index.html" target="_blank" rel="noopener">
-                  <img src="images/js2.png" alt="簡易ピアノのリンク" />
-                </a>
-              </div>
-              <ul class="works-description">
-                <li>
-                  <strong>概要</strong><br />
-                  JavaScriptを使用して、画面上の鍵盤をクリックすることで音が鳴る
-                  簡易ピアノアプリを作成しました。<br />
-                  また、自動演奏機能を実装し、複数の楽曲をランダムで再生できるようにしています。
-                </li>
-                <li>
-                  <strong>工夫点</strong><br />
-                  Web Audio APIを使用して音を再生しています。<br />
-                  自動演奏中は手動操作を無効にし、誤操作を防止しました。<br />
-                  再生中の鍵盤が分かるよう、色が変わる演出を追加しました。
-                </li>
+            <ul class="works-description">
+              <li>
+                <strong>概要</strong><br />
+                JavaScriptを使用して、ストップウォッチを作成しました。
+              </li>
 
-                <li>
-                  <strong>操作手順</strong>
-                  <ol>
-                    <li>鍵盤をクリックすると対応した音が鳴ります。</li>
-                    <li>「自動演奏」ボタンを押すと楽曲が再生されます。</li>
-                    <li>再度ボタンを押すと自動演奏が停止します。</li>
-                  </ol>
-                </li>
-              </ul>
+              <li>
+                <strong>工夫点</strong>
+                <ul>
+                  <li>setIntervalを使用して時間を正確に計測しました。</li>
+                  <li>スタート中はボタンを無効化し、誤操作を防止しました。</li>
+                  <li>時間表示を見やすくするため、表示形式を整えました。</li>
+                </ul>
+              </li>
+
+              <li>
+                <strong>操作手順</strong>
+                <ol>
+                  <li>「スタート」ボタンを押すと計測が始まります。</li>
+                  <li>「ストップ」ボタンで計測を停止します。</li>
+                  <li>「リセット」ボタンで時間を初期化します。</li>
+                </ol>
+              </li>
+            </ul>
+          </div>
+          <div class="piano">
+            <h4 class="img-title">簡易ピアノ</h4>
+            <div class="works-img">
+              <a href="works/piano/index.html" target="_blank" rel="noopener">
+                <img src="images/piano.jpg" alt="簡易ピアノのリンク" />
+              </a>
             </div>
+            <ul class="works-description">
+              <li>
+                <strong>概要</strong><br />
+                JavaScriptを使用して、画面上の鍵盤をクリックすることで音が鳴る
+                簡易ピアノアプリを作成しました。<br />
+                また、自動演奏機能を実装し、複数の楽曲をランダムで再生できるようにしています。
+              </li>
+              <li>
+                <strong>工夫点</strong><br />
+                Web Audio APIを使用して音を再生しています。<br />
+                自動演奏中は手動操作を無効にし、誤操作を防止しました。<br />
+                再生中の鍵盤が分かるよう、色が変わる演出を追加しました。
+              </li>
+              <li>
+                <strong>操作手順</strong>
+                <ol>
+                  <li>鍵盤をクリックすると対応した音が鳴ります。</li>
+                  <li>「自動演奏」ボタンを押すと楽曲が再生されます。</li>
+                  <li>再度ボタンを押すと自動演奏が停止します。</li>
+                </ol>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

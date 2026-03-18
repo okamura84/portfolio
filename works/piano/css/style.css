@@ -1,0 +1,76 @@
+@charset "utf-8";
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 6rem;
+  text-align: center;
+  background-color: #fcfcfc;
+}
+.piano {
+  width: 70%;
+  margin: auto;
+}
+#displayArea {
+  background-color: #eee;
+  height: 150px;
+  width: 50%;
+  margin: auto;
+  line-height: 150px;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+#autoArea {
+  height: 25px;
+}
+
+/* 鍵盤 */
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+.pianoKey {
+  font-size: 2rem;
+  background-color: #fff;
+  color: #000;
+  width: 100%;
+  height: 130px;
+  line-height: 130px;
+  box-shadow: 0 2px #333;
+  border: 2px #000 solid;
+  border-right: none;
+  cursor: pointer;
+  user-select: none;
+}
+.pianoKey:last-child {
+  border-right: 2px solid #000;
+}
+.pianoKey:active {
+  box-shadow: none;
+  translate: 0 2px;
+  background-color: #ff7070;
+}
+.color {
+  box-shadow: none;
+  translate: 0 2px;
+  background-color: #ff7070;
+}
+
+/* オートボタン */
+#autoBtn {
+  width: 200px;
+  margin: auto;
+}
+#button {
+  background-color: #eee;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  display: inline-block;
+}
+#button:hover {
+  background-color: #ddd;
+}
