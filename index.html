@@ -23,15 +23,18 @@
     <script src="js/script.js" defer></script>
   </head>
   <body id="top">
-    <header class="page-header">
+    <header class="header">
       <h1>
         <a href="index.html"><span>I</span>buki's Portfolio</a>
       </h1>
-      <ul class="pc-nav">
-        <li><a href="#introduction">自己紹介</a></li>
-        <li><a href="#sample">実装サンプル</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
-      </ul>
+      <nav>
+        <ul class="pc-nav">
+          <li><a href="#about">自己紹介</a></li>
+          <li><a href="#works">プロジェクト</a></li>
+          <li><a href="#skills">スキル</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
 
       <!-- hamburger -->
       <div class="hamburger">
@@ -40,24 +43,41 @@
         <span></span>
       </div>
 
-      <div class="hamburger-menu">
+      <nav class="hamburger-menu">
         <ul>
-          <li><a href="#introduction">自己紹介</a></li>
-          <li><a href="#sample">実装サンプル</a></li>
+          <li><a href="#about">自己紹介</a></li>
+          <li><a href="#works">プロジェクト</a></li>
+          <li><a href="#skills">スキル</a></li>
           <li><a href="#contact">お問い合わせ</a></li>
         </ul>
-      </div>
+      </nav>
     </header>
 
     <main>
-      <div class="main-image"></div>
+      <!-- fastview -->
+      <div class="main-visual">
+        <div class="main-visual-title">
+          <p>Welcome to My Portfolio!</p>
+          <a
+            href="https://github.com/okamura84"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+            >GitHub</a
+          >
+        </div>
+      </div>
 
-      <section class="introduction wrapper" id="introduction">
+      <!-- about -->
+      <section class="wrapper" id="about">
         <h2 class="section-title">
           自己紹介
           <span class="section-subtitle">About me</span>
         </h2>
-        <div class="inner">
+        <div class="about-flex">
+          <div class="about-image">
+            <img src="images/disney.jpg" alt="ディズニーのお城の画像" />
+          </div>
           <p>
             私の名前は<span>岡村 維吹</span
             >です。神奈川県出身でWebエンジニアを目指して学習に取り組んでいます<br />
@@ -66,88 +86,50 @@
             このサイトでは、これまで制作した作品やスキルをまとめています。<br />
             ぜひご覧ください。
           </p>
-
-          <div class="introduction-image">
-            <img src="images/disney.jpg" alt="ディズニーのお城の画像" />
-          </div>
         </div>
 
-        <div class="introduction-flex">
-          <div class="hobby list-card">
-            <h3 class="introduction-heading">
-              好きなもの・趣味
-              <span class="sub-heading">Favorites / Hobbies</span>
+        <div class="card-flex">
+          <div class="card">
+            <h3 class="card-title">
+              好きなもの
+              <span class="sub-title">Favorites</span>
             </h3>
 
-            <ul class="introduction-box">
+            <ul class="card-list">
               <li>世界遺産</li>
-              <li>映画鑑賞</li>
-              <li>漫画 / アニメ</li>
               <li>ディズニー</li>
               <li>ラーメン</li>
             </ul>
           </div>
-          <div class="web list-card">
-            <h3 class="introduction-heading">
-              スキル
-              <span class="sub-heading">Skills</span>
+
+          <div class="card">
+            <h3 class="card-title">
+              趣味
+              <span class="sub-title">Hobbies</span>
             </h3>
 
-            <ul class="introduction-box">
-              <li>HTML / CSS</li>
-              <li>JavaScript</li>
-              <li>React (学習中)</li>
-              <li>Git / Github</li>
-              <li>Redmine</li>
-              <li>Slack</li>
-              <li>Microsoft Office</li>
-              <li>Visual Studio Code</li>
+            <ul class="card-list">
+              <li>映画鑑賞</li>
+              <li>漫画 / アニメ</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section class="wrapper" id="sample">
+      <!-- works -->
+      <section class="wrapper" id="works">
         <h2 class="section-title">
           プロジェクト
           <span class="section-subtitle">Project</span>
         </h2>
-        <h3 class="sample-heading">画像ギャラリー</h3>
-        <div class="gallery">
-          <div class="gallery-img">
-            <img src="images/gallery01.jpg" alt="宇宙飛行士の画像" />
-            <h4 class="img-title">宇宙飛行士と月</h4>
-            <p>幻想的な色彩の月と雲の前に、宇宙飛行士が立っています。</p>
-          </div>
-          <div class="gallery-img">
-            <img src="images/gallery02.jpg" alt="重ねられた石の画像" />
-            <h4 class="img-title">朝日と石</h4>
-            <p>積み重ねられた石を、朝日が照らしています。</p>
-          </div>
-          <div class="gallery-img">
-            <img src="images/gallery03.jpg" alt="鏡のような湖の画像" />
-            <h4 class="img-title">鏡のような湖</h4>
-            <p>空と海がどちらかわからなくなるような、鏡のような湖です。</p>
-          </div>
-          <div class="gallery-img">
-            <img src="images/gallery04.jpg" alt="ハートの風船の画像" />
-            <h4 class="img-title">ハートの風船</h4>
-            <p>
-              青空をバックに、たくさんの色とりどりのハートの風船が浮いています。
-            </p>
-          </div>
-        </div>
-
-        <!-- works -->
-        <h3 class="sample-heading">Works</h3>
         <div class="works">
-          <div class="stopwatch">
-            <h4 class="img-title">ストップウォッチ</h4>
+          <div class="works-item">
+            <h3 class="works-title">ストップウォッチ</h3>
             <div class="works-img">
               <a
                 href="works/stopwatch/index.html"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <img
                   src="images/stopwatch.jpg"
@@ -178,12 +160,25 @@
                   <li>「リセット」ボタンで時間を初期化します。</li>
                 </ol>
               </li>
+              <li>
+                <a
+                  href="https://github.com/okamura84/portfolio/tree/main/works/stopwatch"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn"
+                  >コードはこちら</a
+                >
+              </li>
             </ul>
           </div>
-          <div class="piano">
-            <h4 class="img-title">簡易ピアノ</h4>
+          <div class="works-item">
+            <h3 class="works-title">簡易ピアノ</h3>
             <div class="works-img">
-              <a href="works/piano/index.html" target="_blank" rel="noopener">
+              <a
+                href="works/piano/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src="images/piano.jpg" alt="簡易ピアノのリンク" />
               </a>
             </div>
@@ -208,6 +203,46 @@
                   <li>再度ボタンを押すと自動演奏が停止します。</li>
                 </ol>
               </li>
+              <li>
+                <a
+                  href="https://github.com/okamura84/portfolio/tree/main/works/piano"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn"
+                  >コードはこちら</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrapper" id="skills">
+        <h2 class="section-title">
+          スキル<span class="section-subtitle">Skills</span>
+        </h2>
+        <div class="card-flex">
+          <div class="card">
+            <h3 class="card-title">
+              フロントエンド
+              <span class="sub-title">Front-end</span>
+            </h3>
+            <ul class="card-list">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>React (Learning)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 class="card-title">
+              ツール<span class="sub-title">Tools</span>
+            </h3>
+            <ul class="card-list">
+              <li>Git</li>
+              <li>VS Code</li>
+              <li>Slack</li>
+              <li>Redmine</li>
             </ul>
           </div>
         </div>
@@ -221,21 +256,14 @@
         <p>ご連絡は下記からお願いいたします。</p>
 
         <a href="mailto:okamura.ibuki0804@gmail.com" class="btn">
-          <span
-            ><i
-              class="fa-solid fa-envelope"
-              style="color: rgb(255, 255, 255)"
-            ></i
-          ></span>
+          <span><i class="fa-solid fa-envelope"></i></span>
           <span>メールで連絡</span>
         </a>
       </section>
-      <a href="#top" class="to-top"
-        ><i class="fa-solid fa-arrow-up" style="color: rgb(255, 255, 255)"></i
-      ></a>
+      <a href="#top" class="to-top"><i class="fa-solid fa-arrow-up"></i></a>
     </main>
 
-    <footer class="page-footer">
+    <footer class="footer">
       <div>
         <small>&copy;2026 Ibuki Okamura</small>
       </div>

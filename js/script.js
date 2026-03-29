@@ -1,5 +1,5 @@
 // ヘッダーずらしてスクロール
-const pageHeader = document.querySelector(".page-header").offsetHeight;
+const pageHeader = document.querySelector(".header").offsetHeight;
 const links = document.querySelectorAll('a[href^="#"]');
 
 links.forEach((link) => {
