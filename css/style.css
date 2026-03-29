@@ -43,10 +43,10 @@ li {
   max-width: 1024px;
   margin: 0 auto;
 }
-/* .inner {
-  max-width: 600px;
+.inner {
+  max-width: 700px;
   margin: 0 auto;
-} */
+}
 
 /* 見出し */
 .section-title,
@@ -280,7 +280,10 @@ li {
 /* main
 ------------- */
 .main-visual {
-  background-color: var(--bg-color);
+  background-image: url(../images/main.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   height: 50vh;
   display: flex;
   align-items: center;
@@ -297,23 +300,38 @@ li {
   margin-bottom: 2rem;
   text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.6);
 }
+.main-visual .btn {
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.2s ease;
+}
+.main-visual .btn:hover {
+  background-color: #4b52a7;
+  opacity: 1;
+}
 
 /* about */
 .about-flex {
   display: flex;
   justify-content: space-between;
-  gap: 32px;
+  gap: 40px;
   align-items: center;
-  margin: 40px auto;
+  margin: 80px auto;
+}
+.about-image {
+  flex: 0 0 180px;
 }
 .about-image img {
+  width: 100%;
   border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.about p {
-  line-height: 32px;
+.about-flex p {
+  line-height: 1.7;
   font-size: 16px;
 }
-.about span {
+.about-flex span {
   font-weight: bold;
 }
 
@@ -322,7 +340,6 @@ li {
   display: flex;
   justify-content: space-between;
   gap: 40px;
-  margin: 0 auto;
 }
 .works-title {
   color: #758baf;
@@ -331,18 +348,25 @@ li {
   margin-bottom: 8px;
 }
 .works-item {
-  width: 48%;
-  margin: 0 auto;
+  flex: 1;
+}
+.works-img a {
+  display: block;
+  overflow: hidden; /* 角丸からはみ出さないように */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 .works-img img {
   width: 100%;
   height: auto;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  transition: opacity 0.2s ease;
+  display: block;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 .works-img img:hover {
   opacity: 0.6;
+  transform: scale(1.03);
 }
 .works-description > li {
   margin-top: 16px;
@@ -432,6 +456,7 @@ footer
   /* 見出し */
   .section-title {
     font-size: 20px;
+    margin: 80px 0 20px;
   }
   .section-subtitle {
     font-size: 12px;
@@ -454,10 +479,6 @@ footer
     gap: 20px;
   }
   .card {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .card-list {
     width: 100%;
   }
   .card-list li {
@@ -487,22 +508,28 @@ footer
     background-size: cover;
     background-position: center;
   }
+
+  /* about */
+  .about-image {
+    width: 140px;
+    height: 140px;
+    flex: none;
+    margin: 0 auto;
+  }
   .about-flex {
     flex-direction: column;
-    width: 90%;
-    margin: 20px auto 2rem;
+    margin: 20px auto;
+    gap: 20px;
   }
-  .about p {
+  .about-flex p {
     font-size: 14px;
+    padding: 0 16px;
   }
 
   /* works */
   .works {
     flex-direction: column;
     margin: 0 auto 2rem;
-  }
-  .works-item {
-    width: 90%;
   }
   .works-description > li {
     font-size: 14px;
