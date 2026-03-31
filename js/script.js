@@ -1,5 +1,5 @@
 // ヘッダーずらしてスクロール
-const pageHeader = document.querySelector(".header").offsetHeight;
+const pageHeader = document.querySelector(".header");
 const links = document.querySelectorAll('a[href^="#"]');
 
 links.forEach((link) => {
@@ -12,13 +12,24 @@ links.forEach((link) => {
     const target = document.querySelector(href);
     if (!target) return;
     const position =
-      target.getBoundingClientRect().top + window.pageYOffset - pageHeader;
+      target.getBoundingClientRect().top +
+      window.pageYOffset -
+      pageHeader.offsetHeight;
 
     window.scrollTo({
       top: position,
       behavior: "smooth",
     });
   });
+});
+
+// スクロールしたらヘッダーを表示
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    pageHeader.classList.add("is-show");
+  } else {
+    pageHeader.classList.remove("is-show");
+  }
 });
 
 // Topに戻るbtn
@@ -39,14 +50,12 @@ const menu = document.querySelector(".hamburger-menu");
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   menu.classList.toggle("active");
-  document.body.classList.toggle("no-scroll");
 });
 
 menu.addEventListener("click", (e) => {
   if (e.target === menu) {
     hamburger.classList.remove("active");
     menu.classList.remove("active");
-    document.body.classList.remove("no-scroll");
   }
 });
 
@@ -57,6 +66,5 @@ menuLinks.forEach((link) => {
   link.addEventListener("click", () => {
     hamburger.classList.remove("active");
     menu.classList.remove("active");
-    document.body.classList.remove("no-scroll");
   });
 });
