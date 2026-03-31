@@ -89,7 +89,7 @@ li {
   margin: 0 auto;
   font-size: 16px;
   font-weight: bold;
-  color: #fff;
+  color: var(--white);
   background-color: var(--main-color);
   border: none;
   border-radius: 20px;
@@ -352,7 +352,7 @@ li {
 }
 .works-img a {
   display: block;
-  overflow: hidden; /* 角丸からはみ出さないように */
+  overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
