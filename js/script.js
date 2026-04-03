@@ -68,7 +68,7 @@ menuLinks.forEach((link) => {
   link.addEventListener("click", toggleMenu);
 });
 
-//
+//セクションフェード
 const targets = document.querySelectorAll(".fade-in");
 
 const observer = new IntersectionObserver(
@@ -81,13 +81,13 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.3,
+    threshold: 0.2,
   },
 );
 
 targets.forEach((target) => observer.observe(target));
 
-//
+//スクロールしたらmain-visualの矢印消す
 const arrow = document.querySelector(".fa-arrow-down");
 
 const arrowObserver = new IntersectionObserver(
