@@ -295,45 +295,69 @@ li {
   background-repeat: no-repeat;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  position: relative;
 }
 .main-visual .main-visual-title {
-  font-size: 2rem;
   text-align: center;
 }
 .main-visual .main-visual-title p {
-  color: var(--white);
   font-size: 3rem;
+  color: var(--white);
   margin-bottom: 2rem;
-  text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
-.visual-sub-title {
-  font-size: 24px;
+.visual-subtitle {
+  font-size: 1.5rem;
   display: block;
 }
 .main-visual .btn {
-  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
   transition: background-color 0.2s ease;
-  margin-bottom: 4rem;
 }
 .main-visual .btn:hover {
   background-color: #4b52a7;
   opacity: 1;
 }
 .main-visual .fa-arrow-down {
+  font-size: 2rem;
   color: var(--white);
   animation: bounce 1s infinite;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 @keyframes bounce {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
   50% {
-    transform: translateY(4px);
+    transform: translateX(-50%) translateY(7px);
   }
+}
+
+/*  */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 1s,
+    transform 1s;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.arrow-hidden {
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 /* about */

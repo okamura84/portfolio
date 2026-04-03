@@ -33,7 +33,6 @@ window.addEventListener("scroll", () => {
 
   if (hamburger.classList.contains("active")) {
     pageHeader.classList.add("is-show");
-    return;
   }
 
   if (window.scrollY > 100) {
@@ -68,3 +67,42 @@ menu.addEventListener("click", (e) => {
 menuLinks.forEach((link) => {
   link.addEventListener("click", toggleMenu);
 });
+
+//
+const targets = document.querySelectorAll(".fade-in");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.3,
+  },
+);
+
+targets.forEach((target) => observer.observe(target));
+
+//
+const arrow = document.querySelector(".fa-arrow-down");
+
+const arrowObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        arrow.classList.add("arrow-hidden");
+      } else {
+        arrow.classList.remove("arrow-hidden");
+      }
+    });
+  },
+  {
+    threshold: 0.9,
+  },
+);
+
+arrowObserver.observe(document.querySelector(".main-visual"));
