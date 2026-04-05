@@ -22,7 +22,7 @@ https://okamura84.github.io/portfolio/
 
 ## 制作期間
 
-約3か月
+約2か月
 
 ## 工夫した点
 
